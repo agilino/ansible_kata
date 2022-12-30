@@ -1,0 +1,8 @@
+# this ansible playbook setups sundergard project
+- name: install packages
+  gather_facts: true
+  hosts: all
+  vars_files:
+    - ./vars/main.yml
+  roles:
+    - { role: provision_config, become: no }
